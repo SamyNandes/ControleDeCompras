@@ -51,9 +51,9 @@ input[type="submit"]:hover {
 body{
     background-color: var(--bege);
     min-height: 100vh;
+    overflow: hidden;
 }
 .container {
-    overflow: hidden;
     z-index: 0;
 }
 .bubbles {
@@ -67,7 +67,7 @@ body{
 
 @keyframes animate {
     0% {
-        transform: translateX(100vw) scale(0) translateY(10px); /* Começa pequeno no topo */
+        transform: translateX(150vw) scale(0) translateY(10px); /* Começa pequeno no topo */
     }
     25% {
         transform: translateX(50vw) scale(1) translateY(50px); /* Movimenta no meio */
