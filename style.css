@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0px;
+}
+.container2{
+    display: flex;
+    justify-content: center ;
+    align-items: center ;
+    height: 99vh;
+    background-color: #92150c00 ;
+    position: relative;
+    z-index: 1;
+}
+.form{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    background: #FFF;
+    color: black;
+    padding: 30px;
+    border-radius: 10px
+}
+input, select{  
+        margin: 10px 0px;
+        padding: 10px 10px;
+        width: 100% !important;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+}
+
+input[type="submit"] {
+            background-color: #92140C;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+input[type="submit"]:hover {
+    background-color: #cf2114;
+}
+
+:root {
+    --vinho: #92140C;
+    --bege: #FFF8F0;
+    --roxo: #1E1E24;
+}
+body{
+    background-color: var(--bege);
+    min-height: 100vh;
+}
+.container {
+    overflow: hidden;
+    z-index: 0;
+}
+.bubbles {
+    display: flex;
+    pointer-events: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100vw) scale(0) translateY(10px); /* Começa pequeno no topo */
+    }
+    25% {
+        transform: translateX(50vw) scale(1) translateY(50px); /* Movimenta no meio */
+    }
+    50% {
+        transform: translateX(0vw) scale(1) translateY(100px); /* Desce para a posição mais baixa */
+    }
+    75% {
+        transform: translateX(-30vw) scale(1) translateY(50px); /* Sobe novamente no meio */
+    }
+    100% {
+        transform: translateX(-50vw) scale(1) translateY(10px); /* Volta ao topo */
+    }
+}
+
+.bubbles span:nth-child(even){
+        animation-duration: calc(120s / var(--i));
+        background: var(--roxo) ;
+        box-shadow: 0 0 0 10px #1e1e2498, 
+        0 0 50px #48485a, 
+        0 0 100px #1d1d24;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: var(--vinho) ;
+    margin: 0px 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #cf21145b, 
+    0 0 50px #c42727, 
+    0 0 100px #e4291c;
+    animation: animate 10s linear infinite;
+    animation-duration: calc(120s / var(--i));
+}
