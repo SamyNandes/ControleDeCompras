@@ -1,5 +1,5 @@
 # Controle De Compras
-Uma interface que permite o envio de dados, afim de controlar as compras, para o SGBD Maria DB via PHP. Foi utilizado o XAMPP como ambiente de desenvolvimento.
+Uma interface que permite o envio de dados, afim de controlar as compras, para o MySQL via PHP. Foi utilizado o XAMPP como ambiente de desenvolvimento.
 # Como instalar?
 1. Baixe o XAMPP no site: [XAMPP](https://www.apachefriends.org/pt_br/download.html).  
 2. Instale.  
